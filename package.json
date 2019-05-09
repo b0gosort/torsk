@@ -1,0 +1,19 @@
+{
+  "name": "torsk",
+  "version": "1.0.0",
+  "description": "en norskspråklig Discord bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b0gosort/torsk.git"
+  },
+  "author": "mrfylke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b0gosort/torsk/issues"
+  },
+  "homepage": "https://github.com/b0gosort/torsk#readme"
+}
