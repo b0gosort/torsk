@@ -1,21 +1,19 @@
 module.exports = {
 	name: "ekko",
 	description: "gjentar samme melding tilbake",
-	execute(message, args) {
-		if (!message.member.roles.some(role => role.name === config.roles.admin || role.name === config.roles.mod)) {
-			message.reply("du har ikke tillatelse til å bruke den kommandoen.");
-			return;
+	execute(config, message, args) {
+		content = args.join(" ");
+		if (content === "") content = ":speak_no_evil:";
+		
+		message.channel.send(content);
+
+		if (message.member.roles.some(role => [config.roles.admin, config.roles.mod].includes(role.name))) {
+			message.delete().catch(error => {
+				console.error(error);
+				message.reply("meldingen din kunne ikke slettes.");
+			});
+		} else {
+			message.react("✅");
 		}
-
-
-		toSend = args.join(" ");
-		if (toSend === "") toSend = ":speak_no_evil:";
-
-		message.channel.send(toSend).then(() => {
-			message.delete();
-		}).catch(error => {
-			console.error(error);
-			message.reply("den meldingen kunne ikke gjentas.");
-		});
 	},
 };

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/b0gosort/torsk/issues"
   },
-  "homepage": "https://github.com/b0gosort/torsk#readme"
+  "homepage": "https://github.com/b0gosort/torsk#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
 }

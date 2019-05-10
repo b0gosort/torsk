@@ -25,7 +25,7 @@ client.on("message", message => {
 	if (!client.commands.has(command)) return;
 
 	try {
-		client.commands.get(command).execute(message, args);
+		client.commands.get(command).execute(config, message, args);
 	} catch (error) {
 		message.reply("den kommandoen kunne ikke utføres.");
 		console.error(error);
