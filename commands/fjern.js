@@ -23,5 +23,5 @@ module.exports = {
 			console.error(error);
 			message.reply("meldingene kunne ikke fjernes.")
 		});
-	},
+	}
 };
