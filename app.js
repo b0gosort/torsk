@@ -30,6 +30,6 @@ client.on("message", message => {
 		message.reply("den kommandoen kunne ikke utføres.");
 		console.error(error);
 	}
-})
+});
 
 client.login(config.token);
