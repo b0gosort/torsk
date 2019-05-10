@@ -27,7 +27,7 @@ client.on("message", message => {
 	try {
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
-		message.channel.send("Den kommandoen kunne ikke utføres.");
+		message.reply("den kommandoen kunne ikke utføres.");
 		console.error(error);
 	}
 })
