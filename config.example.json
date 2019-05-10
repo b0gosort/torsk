@@ -1,0 +1,12 @@
+{
+	"token": "",
+	"prefix": ".",
+	"roles": {
+		"admin": "Administrators",
+		"mod": "Staff",
+		"selectable": [
+			["He/him", "She/her", "They/them"],
+			["Red", "Yellow", "Blue"]
+		]
+	}
+}
