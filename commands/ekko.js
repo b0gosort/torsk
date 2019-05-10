@@ -2,7 +2,7 @@ module.exports = {
 	name: "ekko",
 	description: "gjentar samme melding tilbake",
 	execute(config, message, args) {
-		content = args.join(" ");
+		var content = args.join(" ");
 		if (content === "") content = ":speak_no_evil:";
 		
 		message.channel.send(content);
