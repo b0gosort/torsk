@@ -27,6 +27,7 @@ client.on("message", message => {
 	try {
 		client.commands.get(command).execute(config, message, args);
 	} catch (error) {
+		message.react("❎");
 		message.reply("den kommandoen kunne ikke utføres.");
 		console.error(error);
 	}
