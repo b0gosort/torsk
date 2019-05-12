@@ -3,6 +3,7 @@ module.exports = {
 	description: "fjerner et bestemt tall meldinger fra kanalen",
 	execute(config, message, args) {
 		if (!message.member.roles.some(role => [config.roles.admin, config.roles.mod].includes(role.name))) {
+			message.react("❎");
 			message.reply("du har ikke tillatelse til å bruke den kommandoen.");
 			return;
 		}
@@ -10,6 +11,7 @@ module.exports = {
 		var numMessages = parseInt(args[0]);
 
 		if (numMessages >= 100 || numMessages < 0) {
+			message.react("❎");
 			message.reply("det er ikke mulig å fjerne så mange meldinger.")
 			return;
 		}
@@ -21,6 +23,7 @@ module.exports = {
 			message.channel.send(`${message.author.toString()} har fjerna ${numMessagesString} fra denne kanalen.`);
 		}).catch((error) => {
 			console.error(error);
+			message.react("❎");
 			message.reply("meldingene kunne ikke fjernes.")
 		});
 	}

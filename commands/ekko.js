@@ -10,6 +10,7 @@ module.exports = {
 		if (message.member.roles.some(role => [config.roles.admin, config.roles.mod].includes(role.name))) {
 			message.delete().catch(error => {
 				console.error(error);
+				message.react("❎");
 				message.reply("meldingen din kunne ikke slettes.");
 			});
 		} else {
