@@ -8,5 +8,15 @@
 			["He/him", "She/her", "They/them"],
 			["Red", "Yellow", "Blue"]
 		]
+	},
+	"rules": {
+		"Server": [
+			"Server-wide rule 1",
+			"Server-wide rule 2"
+		],
+		"general": [
+			"#general rule 1",
+			"#general rule 2"
+		]
 	}
 }
